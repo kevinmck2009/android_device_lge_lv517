@@ -44,6 +44,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fingerprintd
 
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    FMRecord \
+    libqcomfm_jni
+
 # HWADDRS
 PRODUCT_PACKAGES += \
     hwaddrs
