@@ -50,10 +50,6 @@ PRODUCT_PACKAGES += \
     FMRecord \
     libqcomfm_jni
 
-# HWADDRS
-PRODUCT_PACKAGES += \
-    hwaddrs
-
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom
