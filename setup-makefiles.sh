@@ -18,7 +18,7 @@
 set -e
 
 # Required!
-DEVICE=ph2n
+DEVICE=lv517
 VENDOR=lge
 
 # Load extractutils and do some sanity checks
