@@ -32,18 +32,22 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 524288000
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # FM
-BOARD_HAVE_QCOM_FM := true
-TARGET_QCOM_NO_FM_FIRMWARE := true
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+
+# Bootanimation
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 
 # Properties
 TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
+
+# Tap to wake
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/lpwg_notify"
 
 # inherit from the proprietary version
 -include vendor/lge/lv517/BoardConfigVendor.mk
