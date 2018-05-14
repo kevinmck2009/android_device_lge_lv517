@@ -22,6 +22,9 @@ $(call inherit-product-if-exists, vendor/lge/lv517/lv517-vendor.mk)
 # common msm8937
 $(call inherit-product, device/lge/sd4xx-common/sd4xx.mk)
 
+# lge common 
+$(call inherit-product, device/lge/common/common.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -44,15 +47,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fingerprintd
 
-# FM
+# GestureHandler
 PRODUCT_PACKAGES += \
-    FM2 \
-    FMRecord \
-    libqcomfm_jni
+    GestureHandler
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    init.qcom.bt.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
